@@ -1,0 +1,39 @@
+flowchart TD
+    A[Start] --> B{Need or Want?}
+    
+    %% Want Pre-Checks %%
+    B -- Want --> C{Can I wait 2 weeks and still want it?}
+    C -- No --> U[Skip buying]
+    C -- Yes --> D{Will this bring joy or lasting value?}
+    D -- No --> U
+    D -- Yes --> E{Does this fit my long-term lifestyle or goals?}
+    E -- No --> U
+    E -- Yes --> F{Will I regret this in 6 months?}
+    F -- Yes --> U
+    F -- No --> G[Proceed to main checks]
+    
+    B -- Need --> G[Proceed to main checks]
+    
+    %% Main Flow for Both Need and Want %%
+    G --> N{Is there a cheaper alternative that's good enough?}
+    N -- Yes --> O[Choose cheaper alternative]
+    N -- No --> H[Consider price vs. quality based on needs]
+    
+    O --> I{Am I prepared for hidden costs?}
+    H --> I
+    
+    I -- No --> Y[Reconsider purchase]
+    I -- Yes --> L[Consider sharing the cost or usage with someone]
+    
+    L --> J{Can I borrow, reuse, or repair something?}
+    J -- Yes --> K[Borrow, reuse, or repair]
+    J -- No --> P{Can I find it second-hand or free?}
+    
+    P -- Yes --> Q[Buy second-hand or free option]
+    P -- No --> R{Would waiting for a sale reduce the cost?}
+    
+    R -- Yes --> S[Wait for a sale]
+    R -- No --> T{Can I bulk buy to save money?}
+    
+    T -- Yes --> V[Bulk buy if practical]
+    T -- No --> X[Proceed with buying]
